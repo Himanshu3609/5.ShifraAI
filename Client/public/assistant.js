@@ -18,7 +18,7 @@
 
     link.rel = "stylesheet"
 
-    link.href = "http://localhost:5173/assistant.css"
+    link.href = "https://shifra-ai-1pma.onrender.com/assistant.css"
 
     document.head.appendChild(link)
 
@@ -83,7 +83,7 @@
             <button class="shifra-mic">
 
                <img 
-               src="http://localhost:5173/mic.svg"
+               src="https://shifra-ai-1pma.onrender.com/mic.svg"
                alt="mic"
                class="shifra-mic-icon"/>
             </button>
@@ -102,7 +102,7 @@
 
     button.innerHTML = `
     <img 
-    src="http://localhost:5173/logo.png"
+    src="https://shifra-ai-1pma.onrender.com/logo.png"
     alt="logo"
     />`;
     document.body.appendChild(button)
@@ -124,7 +124,7 @@
 
     const loadAssistant = async () => {
         try {
-            const res = await fetch(`http://localhost:8000/api/assistant/config/${userId}`)
+            const res = await fetch(`https://shifra-ai-1pma.onrender.com/api/assistant/config/${userId}`)
 
             const data = await res.json()
 
@@ -284,7 +284,7 @@
                 status.innerText = "Thinking...";
                 
 
-                const res = await fetch("http://localhost:8000/api/assistant/ask" , {
+                const res = await fetch("https://shifra-ai-1pma.onrender.com/api/assistant/ask" , {
                     method:"POST",
                     headers:{
                         "Content-Type":
